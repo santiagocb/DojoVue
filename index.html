@@ -45,7 +45,7 @@
                 <tbody>
                     <tr v-for="task in tasks">
                         <td>
-                            <input type="checkbox" v-model="task.done">
+                            <input type="checkbox" v-model="task.done" v-on:click="updateTask(task)">
                         </td>
                         <td>
                             <span :class="{taskDone: task.done}">{{ task.name }}</span>
